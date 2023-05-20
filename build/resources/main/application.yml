@@ -6,6 +6,9 @@ management:
       enabled: true
     env:
       enabled: true
+#  server:
+#    port: 9292
+
   endpoint:
     shutdown:
       enabled: true
@@ -17,7 +20,20 @@ management:
       exposure:
         include: "*"
 
+
+    git:
+      mode: "full"
+
 info:
   app:
     name: hello-actuator
     company: yh
+
+logging:
+  level:
+    hello.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
